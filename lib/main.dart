@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// LoginScreen: Kullanıcının giriş yapması
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -39,7 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 30),
-              // Resim Eklendi
               CircleAvatar(
                 radius: 60,
                 backgroundImage: AssetImage('assets/images/images1.png'),
@@ -76,7 +74,6 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Doğrudan ikinci sayfaya geçiş
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => SecondPage()),
@@ -128,7 +125,6 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-// RegisterScreen: Kullanıcının kayıt olması
 class RegisterScreen extends StatefulWidget {
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
@@ -208,7 +204,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     _showErrorDialog(context, "Lütfen tüm alanları doldurun.");
                     return;
                   }
-                  // Kayıt işlemleri burada yapılabilir
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => LoginScreen()),
@@ -247,7 +242,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 }
 
-// İkinci Sayfa (Kullanıcının Gövde Bilgilerini Girmesi)
 class SecondPage extends StatefulWidget {
   @override
   _SecondPageState createState() => _SecondPageState();
@@ -296,7 +290,6 @@ Yapraklar linear, 5–15 x 1-2.5 mm.; çiçeklenme sırasında alt yapraklar kur
 Çiçek durumu gevşek çiçekli, çiçekler gösterişsiz ve genellikle bitkiler vejetatif büyür, çiçekli örnek çok az bulunur. Kaliks 3–4 mm, sıkça glandular tüylü, diş ovat, obtus. 
 Petaller koyu pembe, 3 loblu, loblar bifit, klav linear, hirsut.
 """;
-
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -329,8 +322,6 @@ Petaller koyu pembe, 3 loblu, loblar bifit, klav linear, hirsut.
     );
   }
 }
-
-// Dördüncü Sayfa (Bitki Bilgilerinin Görüntülendiği Sayfa)
 class FourthPage extends StatelessWidget {
   final String bitkiAdi;
   final String bitkiBilgisi;
@@ -383,8 +374,6 @@ class FourthPage extends StatelessWidget {
     );
   }
 }
-
-// Görüşler Sayfası
 class FeedbackPage extends StatefulWidget {
   @override
   _FeedbackPageState createState() => _FeedbackPageState();
